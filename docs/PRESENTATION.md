@@ -1,53 +1,52 @@
 ### VIAVI SecurePNT EdgeGM 7000
 
-É um relógio mestre voltado para redes que precisam distribuir tempo extremamente
-preciso e confiável. Ele recebe uma referência de tempo e distribui para outros
-equipamentos na rede usando os protocolos PTP e NTP.
+This is a master clock designed for networks that need to distribute extremely
+precise and reliable time. It receives a time reference and distributes it to
+other devices on the network using the protocols PTP and NTP.
 
 ---
 
-#### Conceito PNT — Position, Navigation and Timing
+#### Concept of PNT — Position, Navigation and Timing
 
-Para o caso do EdgeGM 7000, o componente mais importante é o tempo. O GNSS
-normalmente fornece uma referência de tempo boa porém, não confiável o tempo
-todo.
+For the case of the EdgeGM 7000, the most important component is time. The GNSS
+normally provides a good time reference, but it is not always reliable. The PNT
+can suffer from:
 
-Pode sofrer:
+- Jamming: intentional external interference.
+- Spoofing: sending false signals from attackers pretending to be a legitimate
+  reference.
+- Meaconing: a legitimate signal is captured, delayed, and retransmitted.
 
-- Jamming: interferência intencional externa.
-- Spoofing: envio de sinais falsos de atacantes fingindo ser uma referêcia GNSS
-  legítima.
-- Meaconing: um sinal legítimo é capturado, atrasado e retransmitido.
+VIAVI uses the TrustedPNT technology that combines, authenticates, and qualifies
+multiple timing sources.
 
-A VIAVI utiliza a tecnologia TrustedPNT que combina, autentica e qualifica
-multiplas fontes de timing.
-
-Ou seja, na hierarquia, o EdgeGM atua como esse maestro na orquestração das
-diversas referências de tempo (GNSS / GEO / LEO).
+In other words, in the hierarchy, the EdgeGM acts as a master orchestrating the
+various timing references (GNSS / GEO / LEO).
 
 ---
 
 #### NTP vs PTP
 
-#### Network Time Protocol:
+#### Network Time Protocol (NTP):
 
-Quando temos um servidor NTP que será usado para sincronizar dispositivos na rede
-em geral e não há necessidade de precisão extrema.
+When we have a server NTP used to synchronize devices on the network generally,
+and there is no need for extreme precision.
 
-Normalmente utilizado para sincronizar:
+Normally used to synchronize:
 
-- servidores
+- Servers
 - PCs
-- aplicações
-- equipamentos de rede
-- sistemas operacionais
+- Applications
+- Network equipment
+- Operating systems
 
 ---
 
-#### Precision Time Protocol:
+#### Precision Time Protocol (PTP):
 
-É utilizado quando precisamos de uma sincronização muito mais precisa e aí entra
-o orquestrador EdgeGM no topo da hierarquia e age como filtro entre os demais
-equipamentos na rede.
+It is used when we need a much more precise synchronization, and that's where
+the EdgeGM comes to the top of the hierarchy and acts as a filter between the
+other equipment on the network.
 
----
+Note: I made some minor changes to the text to make it flow better in English,
+but the original meaning and content are preserved.
