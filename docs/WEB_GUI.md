@@ -1,8 +1,10 @@
 ### Web GUI Configuration
 
+Base configuration through web GUI.
+
 ---
 
-### PTP
+### PTP Configuration
 
 Depois de definir a referência de tempo, o PTP é responsável por distribuir
 o relógio de acordo com essa referência.
