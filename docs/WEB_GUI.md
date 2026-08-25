@@ -1,29 +1,6 @@
 ### Web GUI Configuration
 
-Base configuration through web GUI.
-
----
-
-### PTP Configuration
-
-Depois de definir a referência de tempo, o PTP é responsável por distribuir
-o relógio de acordo com essa referência.
-
-#### Cenário Proposto - PTP + GNSS/GPS
-
-- GNSS e GEOL fornecem as referências de tempo.
-- EGM-7000 é o PTP Grandmaster (GM).
-- Os equipamentos downstream são PTP slaves ou outros tipos de clock, dependendo
-  da arquitetura.
-
-#### PTP Profile
-
----
-
-Inicialmente utilizaremos o perfil ITU-T G.8275.1 (Multicast).
-Mas também pretendemos realizar os testes utilizando o perfil ITU-T G.8275.2
-(Unicast), para que a homologação não seja realizada utilizando apenas um único
-perfil.
+Configuração via web GUI.
 
 ---
 
